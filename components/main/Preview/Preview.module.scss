@@ -44,6 +44,32 @@
         flex-direction: column;
         align-items: center;
         row-gap: 68px;
+
+        position: relative;
+        z-index: 1;
+        isolation: isolate;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+
+            width: min(100vw, 1500px);
+            height: clamp(260px, 31vw, 440px);
+
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+
+            background: radial-gradient(
+                ellipse at center,
+                rgba(0, 0, 0, 0.62) 0%,
+                rgba(0, 0, 0, 0.45) 38%,
+                rgba(0, 0, 0, 0.2) 58%,
+                rgba(0, 0, 0, 0) 78%
+            );
+        }
     }
 
     &__title {
@@ -60,6 +86,10 @@
         color: #FFFFFF;
 
         text-align: center;
+
+        text-shadow:
+            0 2px 18px rgba(0, 0, 0, 0.75),
+            0 1px 3px rgba(0, 0, 0, 0.9);
     }
 
     &__button {
