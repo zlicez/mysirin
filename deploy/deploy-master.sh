@@ -34,6 +34,14 @@ rsync -a --delete \
   --exclude='.deployed-commit' \
   "$repo_dir/" "$app_dir/"
 
+install -m 0755 "$repo_dir/deploy/deploy-master.sh" \
+  /usr/local/sbin/deploy-sirin-master
+install -m 0644 "$repo_dir/deploy/sirin-deploy.service" \
+  /etc/systemd/system/sirin-deploy.service
+install -m 0644 "$repo_dir/deploy/sirin-deploy.timer" \
+  /etc/systemd/system/sirin-deploy.timer
+systemctl daemon-reload
+
 chmod 750 "$app_dir" "$app_dir/data" "$app_dir/uploads" "$app_dir/backups"
 chmod 600 "$app_dir/.env" "$app_dir/data/sirin.db"
 chmod 755 "$app_dir/docker-entrypoint.sh" "$app_dir/scripts/"*.sh "$app_dir/deploy/"*.sh
