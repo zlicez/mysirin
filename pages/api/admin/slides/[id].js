@@ -1,6 +1,7 @@
 import { withAdmin } from '../../../../src/server/auth';
 import { prisma } from '../../../../src/server/db';
 import { slideSchema, validationMessage } from '../../../../src/server/validation';
+import { serializeAdminSlide } from '../../../../src/server/serializers';
 import { apiError, methodNotAllowed } from '../../../../src/server/api';
 
 export default withAdmin(async function handler(req, res) {
@@ -11,7 +12,7 @@ export default withAdmin(async function handler(req, res) {
       const parsed = slideSchema.safeParse(req.body);
       if (!parsed.success) return res.status(400).json({ message: validationMessage(parsed.error) });
       const slide = await prisma.homeSlide.update({ where: { id }, data: parsed.data });
-      return res.status(200).json(slide);
+      return res.status(200).json(serializeAdminSlide(slide));
     }
     if (req.method === 'DELETE') {
       await prisma.homeSlide.delete({ where: { id } });

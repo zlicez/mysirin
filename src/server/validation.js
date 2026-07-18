@@ -1,6 +1,9 @@
 import { z } from 'zod';
 
-const optionalText = z.string().trim().max(10000).optional().default('');
+const optionalText = z.preprocess(
+  (value) => value == null ? '' : value,
+  z.string().trim().max(10000)
+).default('');
 
 export const newsSchema = z.object({
   title: z.string().trim().min(2).max(300),

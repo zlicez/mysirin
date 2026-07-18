@@ -75,3 +75,11 @@ export function serializeAdminReview(review) {
     active: review.active,
   };
 }
+
+export function serializeAdminSlide(slide) {
+  return {
+    ...slide,
+    title: slide.title || '',
+    alt: slide.alt || '',
+  };
+}

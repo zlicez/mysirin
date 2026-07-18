@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createSessionToken, sessionCookie, verifySessionToken } from '../src/server/auth';
 import { sanitizeNewsHtml } from '../src/server/content';
-import { serializeAdminReview, serializeCrew, serializeNews } from '../src/server/serializers';
-import { applicationSchema, newsSchema, reviewSchema } from '../src/server/validation';
+import { serializeAdminReview, serializeAdminSlide, serializeCrew, serializeNews } from '../src/server/serializers';
+import { applicationSchema, newsSchema, reviewSchema, slideSchema } from '../src/server/validation';
 
 test('admin session token can be verified and rejects tampering', () => {
   const token = createSessionToken({ id: 42 });
@@ -78,4 +78,28 @@ test('review validation and admin serializer preserve carousel fields', () => {
   assert.equal(review.photoImage, 'api/media/avatar.webp');
   assert.equal(review.fullname, 'Анна Петрова');
   assert.equal(review.position, 2);
+});
+
+test('legacy carousel null fields are normalized for CMS editing', () => {
+  const parsed = slideSchema.safeParse({
+    title: null,
+    alt: null,
+    image: 'api/media/slide.webp',
+    position: 1,
+    active: true,
+  });
+  assert.equal(parsed.success, true);
+  assert.equal(parsed.data.title, '');
+  assert.equal(parsed.data.alt, '');
+
+  const slide = serializeAdminSlide({
+    id: 1,
+    title: null,
+    alt: null,
+    image: 'api/media/slide.webp',
+    position: 1,
+    active: true,
+  });
+  assert.equal(slide.title, '');
+  assert.equal(slide.alt, '');
 });
