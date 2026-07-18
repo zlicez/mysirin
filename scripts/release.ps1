@@ -19,6 +19,7 @@ $env:NEXT_PUBLIC_API_URL = '/api/'
 $env:NEXT_PUBLIC_STATIC_URL = '/'
 $env:INTERNAL_API_URL = 'http://127.0.0.1:3000/api/'
 npm run build
+git push origin dev
 
 try {
   git switch master
