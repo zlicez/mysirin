@@ -41,6 +41,22 @@ chmod 755 "$app_dir/docker-entrypoint.sh" "$app_dir/scripts/"*.sh "$app_dir/depl
 cd "$app_dir"
 docker compose --env-file .env build app
 docker compose --env-file .env up -d
+
+app_ready=false
+for attempt in $(seq 1 60); do
+  if curl -fsS http://127.0.0.1:3000/api/crew >/dev/null; then
+    app_ready=true
+    break
+  fi
+  sleep 1
+done
+
+if [ "$app_ready" != true ]; then
+  docker compose --env-file .env ps >&2
+  docker compose --env-file .env logs --tail 100 app >&2
+  exit 1
+fi
+
 docker compose --env-file .env exec -T caddy \
   caddy reload --config /etc/caddy/Caddyfile
 
