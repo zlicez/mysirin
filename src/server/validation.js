@@ -41,6 +41,15 @@ export const slideSchema = z.object({
   active: z.boolean().default(true),
 });
 
+export const reviewSchema = z.object({
+  text: z.string().trim().min(2).max(10000),
+  fullname: z.string().trim().min(2).max(300),
+  vacancy: z.string().trim().min(2).max(1000),
+  photoImage: optionalText,
+  position: z.coerce.number().int().min(0).default(0),
+  active: z.boolean().default(true),
+});
+
 export function validationMessage(error) {
   return error?.issues?.map((issue) => issue.message).join(', ') || 'Некорректные данные';
 }

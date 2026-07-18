@@ -7,6 +7,7 @@ export default function AdminDashboard() {
   useEffect(() => { fetch('/api/admin/dashboard').then((r) => r.ok ? r.json() : null).then(setData); }, []);
   const cards = [
     ['Новостей', data?.news ?? '—'], ['Участников команды', data?.crew ?? '—'],
+    ['Отзывов', data?.reviews ?? '—'],
     ['Всего заявок', data?.applications ?? '—'], ['Новых заявок', data?.newApplications ?? '—'],
     ['Слайдов', data?.slides ?? '—'],
   ];

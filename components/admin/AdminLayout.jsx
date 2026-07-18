@@ -7,6 +7,7 @@ const links = [
   ['/admin', 'Главная'],
   ['/admin/news', 'Новости'],
   ['/admin/crew', 'Команда'],
+  ['/admin/reviews', 'Отзывы'],
   ['/admin/applications', 'Заявки'],
   ['/admin/home', 'Карусель'],
 ];

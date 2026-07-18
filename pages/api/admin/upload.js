@@ -13,6 +13,7 @@ const variants = {
   hero: { width: 1920, height: 848, fit: 'cover' },
   banner: { width: 1920, height: 736, fit: 'cover' },
   profile: { width: 1600, height: 1200, fit: 'cover', position: 'attention' },
+  avatar: { width: 600, height: 600, fit: 'cover', position: 'attention' },
   gallery: { width: 2400, height: 2400, fit: 'inside' },
 };
 

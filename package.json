@@ -10,6 +10,7 @@
     "test": "tsx --test tests/server.test.js",
     "test:integration": "node tests/integration-smoke.mjs",
     "test:browser": "node tests/admin-browser-smoke.mjs",
+    "test:reviews-browser": "node tests/reviews-browser-smoke.mjs",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate deploy",
     "db:seed": "prisma db seed",

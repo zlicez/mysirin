@@ -155,14 +155,6 @@ const Footer = () => {
             <p>Ансамбль «Сирин», © 2011—{currentYear}.</p>
             Все права защищены
           </span>
-          <a
-            target='_blank'
-            href='https://piybeep.com'
-            className={s.footer__piybeep}
-          >
-            Сделано в студии{' '}
-            <span className={s.footer__piybeep_span}>Piybeep</span>
-          </a>
         </div>
       </div>
     </div>

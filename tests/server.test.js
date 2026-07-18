@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createSessionToken, sessionCookie, verifySessionToken } from '../src/server/auth';
 import { sanitizeNewsHtml } from '../src/server/content';
-import { serializeCrew, serializeNews } from '../src/server/serializers';
-import { applicationSchema, newsSchema } from '../src/server/validation';
+import { serializeAdminReview, serializeCrew, serializeNews } from '../src/server/serializers';
+import { applicationSchema, newsSchema, reviewSchema } from '../src/server/validation';
 
 test('admin session token can be verified and rejects tampering', () => {
   const token = createSessionToken({ id: 42 });
@@ -61,4 +61,21 @@ test('request validation rejects invalid ages and accepts a complete news item',
     title: 'Новая публикация', text: '<p>Текст</p>', status: 'DRAFT', coverImage: '',
     publishedAt: new Date().toISOString(), gallery: [],
   }).success, true);
+});
+
+test('review validation and admin serializer preserve carousel fields', () => {
+  const parsed = reviewSchema.safeParse({
+    text: 'Очень понравилось!',
+    fullname: 'Анна Петрова',
+    vacancy: 'Мама ученицы',
+    photoImage: 'uploads/avatar.webp',
+    active: true,
+    position: 2,
+  });
+  assert.equal(parsed.success, true);
+
+  const review = serializeAdminReview({ id: 5, ...parsed.data });
+  assert.equal(review.photoImage, 'api/media/avatar.webp');
+  assert.equal(review.fullname, 'Анна Петрова');
+  assert.equal(review.position, 2);
 });

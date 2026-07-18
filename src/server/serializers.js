@@ -63,3 +63,15 @@ export function serializeAdminCrew(member) {
     gallery: (member.gallery || []).map((image) => publicImagePath(image.filename)),
   };
 }
+
+export function serializeAdminReview(review) {
+  return {
+    id: review.id,
+    text: review.text,
+    fullname: review.fullname,
+    vacancy: review.vacancy,
+    photoImage: publicImagePath(review.photoImage),
+    position: review.position,
+    active: review.active,
+  };
+}

@@ -36,6 +36,7 @@ yarn-error.log*
 next-env.d.ts
 
 .env*
+/.codex/
 
 # local CMS data and uploaded media
 /prisma/*.db
