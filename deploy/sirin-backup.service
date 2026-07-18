@@ -1,0 +1,6 @@
+[Unit]
+Description=Backup Sirin SQLite database and uploads
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/backup-sirin

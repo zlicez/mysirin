@@ -1,0 +1,144 @@
+.anchor {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+
+    width: 10px;
+    height: 100vh;
+
+    transform: translateY(-50%);
+
+    z-index: -9999;
+}
+
+.contact {
+    position: relative;
+
+    min-width: 320px;
+    width: 100%;
+
+    margin: 0 auto;
+    margin-top: 130px;
+
+    padding-bottom: 71px;
+
+    position: relative;
+
+    &::before {
+        content: '';
+        display: inline-block;
+
+        position: absolute;
+        bottom: -1px;
+
+        width: 100%;
+        height: 285px;
+
+        z-index: -1;
+
+        background-color: #1491FF;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 119px;
+    }
+
+    &__info {
+        width: 100%;
+        max-width: 1380px;
+
+        margin: 0 auto;
+
+        border-radius: 20px;
+
+        background-color: #FFFFFF;
+        box-shadow: 0px 10px 30px rgba(0, 18, 54, 0.1);
+
+        padding: 70px 75px;
+
+        display: flex;
+        column-gap: 87px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 45px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 17px;
+    }
+
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 110%;
+        text-transform: uppercase;
+
+        color: #000000;
+    }
+
+    &__subtitle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 34px;
+
+        color: #000000;
+
+        &_adress {
+            width: 100%;
+            max-width: 510px;
+            margin-bottom: 10px;
+
+            position: relative;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &::before {
+                content: '';
+                display: inline-block;
+
+                position: absolute;
+                left: -23px;
+                top: 7px;
+
+                width: 16px;
+                height: 23px;
+
+                background-image: url(../../../public/svg/main/contact/adress.svg);
+                background-repeat: no-repeat;
+            }
+        }
+
+        &_email {
+            text-transform: uppercase;
+        }
+    }
+
+    &__map {
+        width: 100%;
+        max-width: 600px;
+
+        border-radius: 20px;
+
+        overflow: hidden;
+    }
+}
+
+@import './ContactMedia.module.scss';

@@ -1,0 +1,131 @@
+@media screen and (max-width: 1600px) {
+    .item {
+
+        &__img {
+            max-width: 198px;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px){
+    .advantages{
+
+        &__list{
+            column-gap: 100px;
+
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 915px) {
+    .advantages {
+
+        &__title {
+            font-size: 56px;
+            line-height: 68px;
+
+            max-width: 590px;
+        }
+
+        &__list {
+            column-gap: 30px;
+        }
+    }
+
+    .item {
+        row-gap: 30px;
+
+        &__img {
+            max-width: 140px;
+        }
+
+        &__slogan {
+            font-size: 18px;
+            line-height: 120%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .advantages{
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        &__info{
+            row-gap: 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .advantages {
+
+        &__title {
+            font-size: 28px;
+            line-height: 34px;
+
+            max-width: 304px;
+
+            &_span {
+                &::after {
+                    left: -8px;
+                }
+            }
+        }
+
+        &__list {
+            grid-template-columns: repeat(2, auto);
+            justify-content: center;
+            column-gap: 24px;
+            row-gap: 24px;
+        }
+    }
+
+    .item {
+
+        &__img {
+            max-width: 100px;
+        }
+
+        &__slogan {
+            font-size: 16px;
+            line-height: 120%;
+        }
+    }
+}
+
+@media screen and (max-width: 420px){
+    .advantages{
+        padding-top: 48px;
+        padding-bottom: 48px;
+
+        padding-left: 16px;
+        padding-right: 16px;
+
+        &__info{
+            row-gap: 48px;
+        }
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .advantages {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 36px;
+
+        &__list {
+            column-gap: 16px;
+        }
+    }
+
+    .item {
+        row-gap: 20px;
+
+        &__slogan {
+            font-size: 14px;
+            line-height: 120%;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.video{
+    min-width: 320px;
+    width: 100%;
+    max-width: 1920px;
+
+    margin: 0 auto;
+    height: 942px;
+
+    &__iframe{
+        width: inherit;
+        height: inherit;
+    }
+}
+
+@import './VideoMedia.module.scss';

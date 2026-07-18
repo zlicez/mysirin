@@ -1,0 +1,82 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 69px;
+
+    width: 100%;
+    max-width: 1230px;
+
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.title {
+    color: #1491FF;
+    font-family: Montserrat;
+    font-size: 85px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 105%;
+    text-transform: uppercase;
+}
+
+.list {
+    display: flex;
+    column-gap: 30px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 30px 28px;
+
+    width: 100%;
+    max-width: 390px;
+    height: 483px;
+
+    border-radius: 20px;
+
+    background: url('../../public/images/find/background.png');
+    background-position: center;
+
+    &__large {
+        max-width: 810px;
+    }
+
+    &__title {
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    &__button {
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+
+        border-radius: 30px;
+        border: 3px solid #FFF;
+
+        width: 100%;
+        max-width: 182px;
+
+        padding: 11px 0px;
+
+        background-color: transparent;
+
+        cursor: pointer;
+    }
+}
+
+@import './FindMedia.module.scss';

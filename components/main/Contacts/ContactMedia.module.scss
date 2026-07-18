@@ -1,0 +1,187 @@
+@media screen and (max-width: 1600px) {
+    .contact {
+        margin-top: 154px;
+
+        &__wrapper {
+            padding: 0px 24px;
+        }
+
+        &__info {
+            column-gap: 68px;
+
+            padding: 60px 23px;
+            padding-left: 45px;
+
+            max-width: 976px;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 110%;
+        }
+
+        &__text {
+            font-size: 20px;
+            line-height: 110%;
+
+            max-width: 330px;
+            margin-bottom: 15px;
+
+            &_adress {
+                margin-bottom: 15px;
+            }
+
+            &_adress::before {
+                top: 0px;
+            }
+        }
+
+        &__item {
+            row-gap: 12px;
+        }
+
+        &__map {
+            max-width: 522px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .contact {
+
+        margin-top: 115px;
+
+        &__info {
+            column-gap: 38px;
+        }
+
+        &__map {
+            max-width: 552px;
+        }
+
+        &__wrapper{
+            row-gap: 115px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .contact {
+
+        &__info {
+            flex-direction: column;
+            row-gap: 50px;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-areas:
+                'adress phone'
+                'adress email';
+
+            gap: 38px;
+        }
+
+        &__item {
+
+            &_adress {
+                grid-area: adress;
+            }
+
+            &_phone {
+                grid-area: phone;
+            }
+
+            &_email {
+                grid-area: email;
+            }
+        }
+
+        &__map {
+            max-width: unset;
+            height: 375px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .contact{
+        margin-top: 110px;
+
+        &__wrapper{
+            row-gap: 110px;
+        }
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .contact {
+
+        &__wrapper {
+            padding: 0px 16px;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__info {
+            row-gap: 38px;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .contact {
+
+        margin-top: 84px;
+
+        &__info {
+            padding: 30px 10px;
+            padding-left: 30px;
+        }
+
+        &__wrapper{
+            row-gap: 84px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .contact {
+
+        margin-top: 64px;
+
+        &__wrapper{
+            row-gap: 64px;
+        }
+
+        &__info {
+            padding-right: 0px;
+            padding-left: 10px;
+        }
+
+        &__title {
+            font-size: 18px;
+            line-height: 110%;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &__item{
+
+            &_adress{
+                padding-left: 20px;
+            }
+
+            &_phone, &_email{
+
+                padding: 0px 25px;
+            }
+        }
+    }
+}

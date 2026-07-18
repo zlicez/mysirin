@@ -1,0 +1,31 @@
+.menu {
+    padding: 14px 16px;
+
+    min-width: 320px;
+    width: 100%;
+
+    display: none;
+    justify-content: space-between;
+    column-gap: 18px;
+
+    overflow-y: scroll;
+
+    margin-bottom: 16px;
+
+    &__link {
+        white-space: nowrap;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+
+        color: #000000;
+
+        text-shadow: 0px 0px 15px rgba(19, 62, 112, 0.15);
+    }
+}
+
+@import './MenuMedia.module.scss';

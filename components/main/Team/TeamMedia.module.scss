@@ -1,0 +1,163 @@
+@media screen and (max-width: 1600px) {
+    .team {
+
+        margin-top: 110px;
+
+        &__header {
+            display: flex;
+            flex-direction: column;
+            align-items: unset;
+        }
+
+        &__list {
+            gap: 23px;
+        }
+
+        &__button {
+            margin-bottom: unset;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .team {
+
+        &__list {
+            margin-top: 110px;
+        }
+    }
+
+    .teachers {
+        &__name {
+            font-size: 22.2179px;
+            line-height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .team {
+
+        &__list {
+            grid-template-columns: repeat(2, auto);
+            justify-content: space-between;
+        }
+    }
+
+    .teachers {
+
+        max-width: 341px;
+        height: 527px;
+        max-height: unset;
+
+
+        &_first {
+            grid-column: auto;
+        }
+
+        &_last {
+            grid-column: auto;
+        }
+
+        &__name {
+            font-size: 33px;
+
+            max-width: 200px;
+
+            left: 33px;
+            bottom: 33px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .team {
+        &__list {
+            justify-content: center;
+        }
+    }
+
+    .teachers {
+        min-height: unset;
+
+        max-width: 200px;
+        height: 284px;
+
+        &__name {
+            left: 20px;
+            bottom: 17px;
+
+            font-size: 18px;
+
+            max-width: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .team {
+
+        &__header {
+            row-gap: 35px;
+        }
+
+        &__title {
+            font-size: 28px;
+            line-height: 110%;
+
+            max-width: 162px;
+        }
+
+        &__subtitle {
+            font-size: 20px;
+            line-height: 24px;
+
+            max-width: 388px;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .team {
+        margin-top: 84px;
+
+        &__info {
+            padding: 0px 16px;
+        }
+
+        &__list {
+            margin-bottom: 84px;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .teachers {
+
+        max-width: 136px;
+        height: 211px;
+
+        &__name {
+            bottom: 14px;
+            left: 14px;
+
+            font-size: 13px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .team {
+        margin-top: 64px;
+
+        &__title {
+            font-size: 22px;
+            line-height: 110%;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.anchor{
+    width: 10px;
+    height: 100vh;
+
+    position: absolute;
+    top: 50%;
+    left: 0px;
+
+    transform: translateY(-50%);
+
+    z-index: -999999;
+}
+.about {
+    position: relative;
+
+    margin: 0 auto;
+    margin-top: 94px;
+    margin-bottom: 113px;
+
+    min-width: 320px;
+    width: 100%;
+    max-width: 1245px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 54px;
+
+    &__title {
+        grid-column: 1;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 85px;
+        line-height: 60px;
+
+        color: #1491FF;
+
+        margin-top: 9px;
+    }
+
+    &__content {
+        grid-column: 2;
+        display: grid;
+        gap: 45px;
+        min-width: 0;
+    }
+
+    &__subtitle {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 34px;
+
+        color: #000000;
+    }
+
+    &__copy {
+        display: grid;
+        gap: 22px;
+    }
+
+    &__text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 140%;
+        /* or 25px */
+
+
+        color: #000000;
+    }
+
+    &__button {
+        width: fit-content;
+    }
+}
+
+@import './AboutMedia.module.scss';

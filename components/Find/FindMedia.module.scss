@@ -1,0 +1,57 @@
+@media screen and (max-width: 1550px) {
+    .wrapper {
+        padding: 0px 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .item {
+
+        &__title {
+            font-size: 20px;
+        }
+
+        &__button {
+            padding: 14px 32px;
+
+            width: fit-content;
+            max-width: unset;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        row-gap: 30px;
+    }
+
+    .title {
+        font-size: 58px;
+    }
+
+    .list {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .item {
+        max-width: unset;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .wrapper {
+        padding: 0px 16px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .title {
+        font-size: 28px;
+    }
+
+    .item {
+        height: 300px;
+    }
+}

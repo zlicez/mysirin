@@ -1,0 +1,146 @@
+@media screen and (max-width: 1420px) {
+    .form {
+        align-items: unset;
+
+        &__wrapper {
+            max-width: 976px;
+        }
+
+        &__info {
+            align-items: unset;
+        }
+
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__radios {
+            column-gap: 50px;
+        }
+
+        &__label {
+            border: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .form {
+
+        &__wrapper {
+            margin-right: 24px;
+            margin-left: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form {
+
+        &__wrapper {
+            margin-left: 0px;
+            margin-right: 0px;
+
+            padding-bottom: 64px;
+        }
+
+        &__header {
+            font-size: 56px;
+            line-height: 68px;
+        }
+
+        &__button {
+            font-size: 18px;
+            line-height: 22px;
+
+            padding: 14px 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .form {
+
+        &__wrapper {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .form {
+
+        &__wrapper {
+            padding-bottom: 54px;
+        }
+
+        &__header {
+            font-size: 28px;
+            line-height: 34px;
+
+            max-width: 220px;
+
+            &_span {
+                padding: 0px 8px;
+            }
+        }
+
+        &__info {
+            align-items: center;
+        }
+
+        &__title {
+            font-size: 18px;
+            line-height: 105%;
+        }
+
+        &__list {
+            row-gap: 28px;
+
+            margin-top: 49px;
+        }
+
+        &__item {
+
+            &_adress {
+                margin-top: 46px;
+            }
+        }
+
+        &__radios {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 27px;
+        }
+
+        &__input {
+            font-size: 12px;
+            line-height: 105%;
+
+            padding: 20px;
+        }
+
+        &__label {
+            max-width: unset;
+        }
+
+        &__text {
+            max-width: 245px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .form {
+
+        &__button {
+            font-size: 14px;
+            line-height: 17px;
+
+            padding: 12px 24px;
+        }
+    }
+}

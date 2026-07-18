@@ -1,0 +1,75 @@
+.info {
+    min-width: 320px;
+    width: 100%;
+    max-width: 1230px;
+
+    margin: 0 auto;
+    margin-top: 46px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 40px;
+    }
+
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 34px;
+        text-transform: uppercase;
+
+        color: #000000;
+
+        width: 100%;
+        max-width: 944px;
+    }
+
+    &__date {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 34px;
+        text-transform: uppercase;
+
+        color: #000000;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 1230px;
+
+        margin-top: 38px;
+        margin-bottom: 54px;
+
+        border-radius: 20px;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 30px;
+
+        width: 100%;
+    }
+
+    &__text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+
+        white-space: break-spaces;
+
+        color: #000000;
+
+        a {
+            color: #1491FF;
+        }
+    }
+}
+
+@import './InfoMedia.module.scss';

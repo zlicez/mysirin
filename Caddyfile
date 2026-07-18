@@ -1,0 +1,13 @@
+{
+  email ef.sirin@mail.ru
+}
+
+mysirin.ru, www.mysirin.ru {
+  encode zstd gzip
+  reverse_proxy app:3000
+}
+
+http://104.171.138.44 {
+  encode zstd gzip
+  reverse_proxy app:3000
+}

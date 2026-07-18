@@ -1,0 +1,125 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  name         String   @default("Администратор")
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model News {
+  id         Int         @id @default(autoincrement())
+  title      String
+  text       String      @default("")
+  status     String      @default("DRAFT")
+  coverImage String?
+  publishedAt DateTime   @default(now())
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  gallery    NewsImage[]
+
+  @@index([status, publishedAt])
+}
+
+model NewsImage {
+  id       Int    @id @default(autoincrement())
+  newsId   Int
+  filename String
+  position Int    @default(0)
+  news     News   @relation(fields: [newsId], references: [id], onDelete: Cascade)
+
+  @@index([newsId, position])
+}
+
+model CrewMember {
+  id           Int         @id @default(autoincrement())
+  fullname     String
+  vacancy      String
+  subVacancy   String?
+  education    String?
+  experience   String?
+  achievements String?
+  position     Int         @default(0)
+  photoImage   String?
+  bannerImage  String?
+  active       Boolean     @default(true)
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  gallery      CrewImage[]
+
+  @@index([active, position])
+}
+
+model CrewImage {
+  id        Int        @id @default(autoincrement())
+  crewId    Int
+  filename  String
+  position  Int        @default(0)
+  crew      CrewMember @relation(fields: [crewId], references: [id], onDelete: Cascade)
+
+  @@index([crewId, position])
+}
+
+model Application {
+  id                Int      @id @default(autoincrement())
+  fullnameApplicant String
+  fullnameStudent   String
+  ageStudent        Int
+  contact           String
+  place             String
+  status            String   @default("NEW")
+  emailStatus       String   @default("PENDING")
+  emailError        String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([status, createdAt])
+}
+
+model Contact {
+  id       Int    @id @default(autoincrement())
+  type     String
+  data     String
+  position Int    @default(0)
+
+  @@index([type, position])
+}
+
+model Review {
+  id         Int     @id @default(autoincrement())
+  text       String
+  photoImage String?
+  fullname   String
+  vacancy    String
+  position   Int     @default(0)
+  active     Boolean @default(true)
+
+  @@index([active, position])
+}
+
+model HomeSetting {
+  id       Int     @id @default(1)
+  urlVideo String?
+}
+
+model HomeSlide {
+  id        Int      @id @default(autoincrement())
+  title     String?
+  alt       String?
+  image     String
+  position  Int      @default(0)
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([active, position])
+}

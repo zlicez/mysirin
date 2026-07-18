@@ -1,0 +1,51 @@
+.header {
+    display: grid;
+    grid-template-areas:
+        'title text'
+        'title button';
+    align-items: end;
+    row-gap: 50px;
+    column-gap: 30px;
+
+    width: 100%;
+    max-width: 1230px;
+
+    margin: 0 auto;
+
+    &__title {
+        grid-area: title;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 85px;
+        line-height: 100%;
+
+        color: #1491FF;
+
+        width: 100%;
+        max-width: 600px;
+    }
+
+    &__subtitle {
+        grid-area: text;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 110%;
+
+        color: #000000;
+    }
+
+    &__button {
+        grid-area: button;
+
+        width: fit-content;
+
+        margin-bottom: 10px
+    }
+}
+
+@import './HeaderMedia.module.scss';

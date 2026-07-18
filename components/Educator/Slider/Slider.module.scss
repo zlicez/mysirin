@@ -1,0 +1,72 @@
+.slider {
+    margin: 0 auto;
+    margin-top: 75px;
+
+    min-width: 320px;
+    width: 100%;
+    max-width: 1300px;
+
+    height: auto;
+
+    &__wrapper {
+        width: 100%;
+        max-width: 1300px;
+
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+    }
+
+    &__swiper {
+        width: 100%;
+        height: auto;
+    }
+
+    &__slide {
+        height: auto;
+        max-height: 338px;
+
+        border-radius: 20px;
+
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__img {
+        width: 100%;
+        min-height: 100%;
+
+        border-radius: 20px;
+
+        object-fit: cover;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+
+        cursor: pointer;
+
+        transition: .3s;
+
+        &:hover {
+            opacity: .3;
+        }
+    }
+
+    &__back {
+        margin-top: 30px;
+        margin-bottom: 80px;
+
+        width: 100%;
+        max-width: 1260px;
+
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@import './SliderMedia.module.scss';

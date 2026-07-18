@@ -1,0 +1,89 @@
+.list {
+    min-width: 320px;
+    width: 100%;
+    max-width: 1228px;
+
+    margin: 0 auto;
+    margin-top: 117px;
+    margin-bottom: 100px;
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;
+}
+
+.item {
+    display: flex;
+    column-gap: 30px;
+
+    padding: 45px;
+
+    background-color: #fff;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    width: 100%;
+    max-width: 600px;
+
+    cursor: default;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        row-gap: 30px;
+    }
+
+    &__img {
+        grid-area: img;
+
+        width: 100%;
+        max-width: 240px;
+
+        height: auto;
+        aspect-ratio: 4 / 3;
+
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 20px;
+    }
+
+    &__title {
+        grid-area: title;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 105%;
+
+        color: #000000;
+
+        width: 100%;
+        max-width: 229px;
+    }
+
+    &__subtitle {
+        grid-area: subtitle;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+
+        color: #000000;
+
+        width: 100%;
+        max-width: 210px;
+    }
+
+    &__button {
+        grid-area: button;
+
+        margin-top: auto
+    }
+}
+
+@import './ListMedia.module.scss';

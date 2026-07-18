@@ -1,0 +1,30 @@
+.customButton {
+    width: fit-content;
+    height: fit-content;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #1D88E6;
+
+    border: 3px solid #118DFD;
+    border-radius: 30px;
+
+    background-color: transparent;
+    padding: 11px 20px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    &:hover{
+        color: #fff;
+
+        background-color: #1491FF;
+    }
+}
+
+@import './CustomButtonMedia.module.scss';

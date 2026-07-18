@@ -1,0 +1,102 @@
+.allNews {
+    min-width: 320px;
+    width: 100%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+    margin-bottom: 108px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 43px;
+
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 34px;
+        text-transform: uppercase;
+
+        color: #000000;
+
+        width: fit-content;
+
+        margin-left: 40px;
+    }
+
+    &__info {
+        display: flex;
+        column-gap: 20px;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 85px;
+
+        width: fit-content;
+        height: fit-content;
+
+        transition: .3s;
+
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: .3;
+        }
+    }
+
+    &__swiper {
+        width: 100%;
+        max-width: 1230px;
+    }
+
+    &__slide {
+        width: 100%;
+        max-width: 285px;
+    }
+
+    &__img {
+        width: 100%;
+
+        max-width: 285px;
+        max-height: 200px;
+        min-height: 200px;
+
+        object-fit: cover;
+
+        border-radius: 20px;
+    }
+
+    &__date {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+
+        color: #000000;
+
+        margin-top: 26px;
+        margin-bottom: 4px;
+    }
+
+    &__text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+
+        color: #000000;
+    }
+}
+
+@import './AllNewsMedia.module.scss';

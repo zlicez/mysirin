@@ -1,0 +1,232 @@
+.form {
+    display: flex;
+    justify-content: center;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        row-gap: 50px;
+    }
+
+    &__wrapper {
+        min-width: 320px;
+        width: 100%;
+        max-width: 1230px;
+        height: fit-content;
+
+        &_shadow {
+            box-shadow: none;
+        }
+    }
+
+    &__header {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 85px;
+        line-height: 104px;
+        text-transform: uppercase;
+
+        color: #1491FF;
+
+        &_row {
+            color: #1491FF;
+            font-family: Montserrat;
+            font-size: 85px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 105%;
+
+            width: 100%;
+            max-width: 573px;
+        }
+
+        &_span {
+            color: #fff;
+
+            padding: 0px 12px;
+
+            background-color: #1491FF;
+        }
+    }
+
+    &__list {
+        margin-top: 69px;
+
+        display: grid;
+        grid-template-areas:
+            'applicant contact'
+            'student age'
+            'adress adress';
+        row-gap: 35px;
+        column-gap: 30px;
+        grid-template-columns: minmax(300px, 600px);
+
+        width: 100%;
+        max-width: 1231px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+
+        width: 100%;
+        max-width: 600px;
+
+        &_applicant {
+            grid-area: applicant;
+        }
+
+        &_student {
+            grid-area: student;
+        }
+
+        &_age {
+            grid-area: age;
+        }
+
+        &_contact {
+            grid-area: contact;
+        }
+
+        &_adress {
+            max-width: 100%;
+            grid-area: adress;
+            grid-column: span 2;
+        }
+    }
+
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 105%;
+
+        color: #000000;
+    }
+
+    &__input {
+        padding: 20px 33px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 105%;
+
+        color: #747A80;
+
+        outline: none;
+
+        border-radius: 40px;
+        border: none;
+
+        opacity: 0.5;
+
+        width: 100%;
+        max-width: 600px;
+
+        background-color: #DBE0E3;
+
+        &::-webkit-inner-spin-button {
+            appearance: none;
+        }
+
+        &_error {
+            border-color: red;
+            color: red;
+        }
+    }
+
+
+    &__radios {
+        display: flex;
+        column-gap: 30px;
+
+        height: 100%;
+    }
+
+    &__radio {
+        display: none;
+
+        &:checked {
+
+            +.form__label {
+                background-color: #1491FF;
+                box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+
+                color: #fff;
+
+                &>svg>path {
+                    fill: white;
+                }
+            }
+        }
+    }
+
+    &__label {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+
+        color: #1491FF;
+
+        transition: .3s;
+
+        min-height: inherit;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 13px;
+
+        border: 3px solid #1491FF;
+        filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.1));
+
+        border-radius: 20px;
+
+        padding: 26px 20px;
+
+        width: 100%;
+        max-width: 285px;
+
+        cursor: pointer;
+
+        &_svg {
+            stroke: black;
+
+            transition: .3s;
+        }
+    }
+
+    &__button {
+        height: fit-content;
+        width: fit-content;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 34px;
+        text-transform: uppercase;
+
+        color: #1D88E6;
+
+        background-color: transparent;
+
+        padding: 13px 48px;
+
+        border-radius: 40px;
+        border: 3px solid #1491FF;
+
+        cursor: pointer;
+    }
+}
+
+@import './FormMedia.module.scss';

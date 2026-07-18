@@ -1,0 +1,13 @@
+.wrapper {
+    width: 100%;
+    max-width: 1228px;
+
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 78px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+@import './FlagsMedia.module.scss';

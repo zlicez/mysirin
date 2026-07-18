@@ -1,0 +1,127 @@
+@media screen and (max-width: 1420px) {
+    .footer {
+
+        &__info{
+            padding: 0px 24px;
+        }
+
+        &__wrapper {
+            height: auto;
+
+            max-width: 978px;
+        }
+
+        &__root {
+            padding-left: 24px;
+        }
+
+        &__contact {
+            margin-bottom: 47px;
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .footer {
+
+        &__navigation {
+            column-gap: 20px;
+        }
+
+        &__link {
+            font-size: 16px;
+            line-height: 110%;
+        }
+
+        &__root{
+            flex-direction: column;
+            row-gap: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .footer{
+
+        &__info{
+            flex-direction: column;
+            row-gap: 40px;
+        }
+
+        &__list{
+            padding-left: 23px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding-top: 60px;
+        padding-bottom: 28px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .footer {
+        padding-top: 60px;
+
+        &__wrapper {
+            padding: 0px 16px;
+        }
+
+        &__root {
+            padding-left: 0px;
+        }
+
+        &__info {
+            padding: 0px;
+        }
+
+        &__navigation {
+            display: grid;
+            grid-template-columns: repeat(2, 150px);
+            column-gap: 20px;
+            row-gap: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 50px;
+
+        &__text {
+
+            &_adress {
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+        &__list{
+            padding-left: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 342px){
+    .footer{
+
+        &__root{
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .footer {
+
+        &__link {
+            font-size: 16px;
+            line-height: 110%;
+        }
+    }
+}

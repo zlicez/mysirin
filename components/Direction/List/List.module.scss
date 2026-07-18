@@ -1,0 +1,75 @@
+.list {
+    min-width: 320px;
+    width: 100%;
+    max-width: 1228px;
+
+    margin: 0 auto;
+    margin-top: 92px;
+    margin-bottom: 100px;
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;
+}
+
+.item {
+    display: grid;
+    grid-template-areas:
+        'img title'
+        'img button';
+    column-gap: 30px;
+    row-gap: 40px;
+
+    padding: 45px;
+
+    background-color: #fff;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    width: 100%;
+    max-width: 600px;
+
+    &__img {
+        grid-area: img;
+
+        max-width: 240px;
+
+        border-radius: 20px;
+    }
+
+    &__head {
+        grid-area: title;
+    }
+
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 105%;
+
+        color: #000000;
+
+        width: 100%;
+        max-width: 229px;
+    }
+
+    &__text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+
+        font-size: 14px;
+        line-height: 105%;
+
+        color: #333;
+
+        margin-top: 20px;
+    }
+
+    &__button {
+        grid-area: button;
+    }
+}
+
+@import './ListMedia.module.scss';

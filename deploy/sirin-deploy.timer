@@ -1,0 +1,11 @@
+[Unit]
+Description=Check Sirin master branch for deployments
+
+[Timer]
+OnBootSec=2m
+OnUnitActiveSec=1m
+RandomizedDelaySec=10s
+Persistent=true
+
+[Install]
+WantedBy=timers.target

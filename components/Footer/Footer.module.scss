@@ -1,0 +1,166 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    max-width: 300px;
+}
+
+.footer {
+    background-color: #1491FF;
+
+    padding-top: 48px;
+
+    min-width: 320px;
+    width: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+
+    &__wrapper {
+        width: 100%;
+        max-width: 1230px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding-bottom: 20px;
+
+        height: 425px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__navigation {
+        // width: 100%;
+        // max-width: 812px;
+
+        // display: flex;
+        // column-gap: 30px;
+
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 46px;
+        row-gap: 30px;
+        grid-template-rows: repeat(3, min-content);
+    }
+
+    &__link {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 110%;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+
+        width: fit-content;
+        height: fit-content;
+
+        cursor: pointer;
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        row-gap: 42px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    &__title {
+        margin-bottom: 5px;
+
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 110%;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+
+        margin-bottom: 5px;
+    }
+
+    &__text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+
+        color: #FFFFFF;
+
+        max-width: 250px;
+
+        &_adress {
+            position: relative;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 23px;
+
+                background-image: url(../../public/svg/footer/adress.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+
+                position: absolute;
+                left: -30px;
+                top: 4px;
+            }
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        column-gap: 31px;
+    }
+
+    &__root {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+
+        color: #FFFFFF;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__piybeep {
+
+        &_span {
+            text-decoration: underline;
+        }
+    }
+}
+
+.icon {
+    width: 33px;
+    height: 33px;
+}
+
+@import './FooterMedia.module.scss';

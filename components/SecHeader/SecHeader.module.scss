@@ -1,0 +1,73 @@
+.SecHeader {
+    min-width: 320px;
+    width: 100%;
+
+    margin: 0 auto;
+
+    padding: 12px 0px;
+
+    box-shadow: 0px -5px 30px rgba(0, 16, 31, 0.2);
+    background-color: #fff;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 62px;
+
+        min-width: 320px;
+        width: 100%;
+        max-width: 1230px;
+
+        margin: 0 auto;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        width: 100%;
+        max-width: 255px;
+    }
+
+    &__title {
+        width: 100%;
+        max-width: 133px;
+    }
+
+    &__subtitle {
+        width: 100%;
+        max-width: 108px;
+    }
+
+    &__nav {
+        width: 100%;
+
+        display: flex;
+
+        column-gap: 47px;
+    }
+
+    &__link {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+
+        color: #000000;
+
+        text-shadow: 0px 0px 15px rgba(19, 62, 112, 0.15);
+
+        cursor: pointer;
+
+        white-space: nowrap;
+
+        &_active {
+            color: #1491FF;
+        }
+    }
+}
+
+@import './SecHeaderMedia.module.scss';
